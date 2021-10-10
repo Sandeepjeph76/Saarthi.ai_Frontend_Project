@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/actions/zoom.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/actions/</a> zoom.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">48.24% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>41/85</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/50</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">33 statements, 1 function, 8 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as types from '../constants/ActionTypes';
+import { startWorker } from './buffer';
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function setZoom(start, end) {</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >    start = parseFloat(start);</span>
+<span class="cstat-no" title="statement not covered" >    end = parseFloat(end);</span>
+<span class="cstat-no" title="statement not covered" >    if (end &lt; start) {</span>
+      [<span class="cstat-no" title="statement not covered" >start,</span> <span class="cstat-no" title="statement not covered" >end]</span> = [end, start];
+    }
+<span class="cstat-no" title="statement not covered" >    start = Math.max(0, start);</span>
+<span class="cstat-no" title="statement not covered" >    end = Math.max(start, end);</span>
+<span class="cstat-no" title="statement not covered" >    const length = end - start;</span>
+<span class="cstat-no" title="statement not covered" >    dispatch({</span>
+      type: types.SET_ZOOM,
+      start: start,
+      end: end,
+      length: length
+    });
+<span class="cstat-no" title="statement not covered" >    dispatch(startWorker('zoom'));</span>
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function zoomIn() {</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { zoom } = getState();
+<span class="cstat-no" title="statement not covered" >    const newLength = zoom.length / 2;</span>
+<span class="cstat-no" title="statement not covered" >    let newEnd = zoom.start + newLength;</span>
+<span class="cstat-no" title="statement not covered" >    newEnd = Math.max(zoom.start + 1, newEnd);</span>
+<span class="cstat-no" title="statement not covered" >    dispatch(setZoom(zoom.start, newEnd));</span>
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function zoomOut() {</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { buffer, zoom } = getState();
+<span class="cstat-no" title="statement not covered" >    const newLength = zoom.length * 2;</span>
+<span class="cstat-no" title="statement not covered" >    let newStart = zoom.start;</span>
+<span class="cstat-no" title="statement not covered" >    let newEnd = newStart + newLength;</span>
+<span class="cstat-no" title="statement not covered" >    if (newEnd &gt; buffer.length) {</span>
+<span class="cstat-no" title="statement not covered" >      newEnd = buffer.length;</span>
+<span class="cstat-no" title="statement not covered" >      newStart = newEnd - newLength;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    newEnd = Math.min(newEnd, buffer.length || 0);</span>
+<span class="cstat-no" title="statement not covered" >    newStart = Math.max(newStart, 0);</span>
+<span class="cstat-no" title="statement not covered" >    dispatch(setZoom(newStart, newEnd));</span>
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function zoomShowAll() {</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { buffer } = getState();
+<span class="cstat-no" title="statement not covered" >    dispatch(setZoom(0, buffer.length || 0));</span>
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function zoomMoveCenter(ratio) {</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { buffer, zoom } = getState();
+<span class="cstat-no" title="statement not covered" >    const bufferLength = buffer.length;</span>
+<span class="cstat-no" title="statement not covered" >    const zoomLength = zoom.end - zoom.start;</span>
+<span class="cstat-no" title="statement not covered" >    const halfLength = Math.round(zoomLength / 2);</span>
+<span class="cstat-no" title="statement not covered" >    const centerPoint = bufferLength * ratio;</span>
+<span class="cstat-no" title="statement not covered" >    const maxStart = bufferLength - zoomLength;</span>
+<span class="cstat-no" title="statement not covered" >    const guessStart = centerPoint - halfLength;</span>
+<span class="cstat-no" title="statement not covered" >    let start = guessStart;</span>
+<span class="cstat-no" title="statement not covered" >    start = Math.min(start, maxStart);</span>
+<span class="cstat-no" title="statement not covered" >    start = Math.max(0, start);</span>
+<span class="cstat-no" title="statement not covered" >    const end = start + zoomLength;<span class="cstat-no" title="statement not covered" ></span></span>
+    /*
+    console.log('center:',
+      'ratio', ratio,
+      'bufferLength', bufferLength,
+      'zoomLength', zoomLength,
+      'halfLength', halfLength,
+      'centerPoint', centerPoint,
+      'maxStart', maxStart,
+      'guessStart', guessStart,
+      'start', start,
+      'end', end
+    );
+    */
+    dispatch(setZoom(start, end));
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function setZoomEdit(isEditing, editType) {</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >    dispatch({</span>
+      type: types.SET_ZOOM_EDIT,
+      isEditing: isEditing,
+      editType: editType
+    });
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function toggleZoomPanel() {</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { zoom } = getState();
+<span class="cstat-no" title="statement not covered" >    dispatch({</span>
+      type: types.SET_ZOOM_PANEL_EXPANDED,
+      zoomPanelExpanded: !zoom.zoomPanelExpanded
+    });
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

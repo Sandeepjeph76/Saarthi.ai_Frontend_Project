@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/pages/Editor.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/pages/</a> Editor.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75.68% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>56/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.57% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>14/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.56% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/18</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">50 statements, 14 functions, 31 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { findDOMNode } from 'react-dom';
+import { Row, Col, Button, Glyphicon, Input, Jumbotron, Table } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import humanizeDuration from 'humanize-duration';
+import { setBufferFromFile } from '../actions/buffer';
+import AudioEditor from '../components/AudioEditor';
+import ExampleFileSelector from '../components/ExampleFileSelector';
+&nbsp;
+class Editor<span class="fstat-no" title="function not covered" > </span>extends Component {
+  componentDidMount() {
+<span class="cstat-no" title="statement not covered" >    this.boundHandleFileSelect =  this.handleFileSelect.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('dragover', this.handleFileDrag, false);</span>
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('dragleave', this.handleFileDrag);</span>
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('drop', this.boundHandleFileSelect, false);</span>
+  }
+  componentWillUnmount() {
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener('dragover', this.handleFileDrag);</span>
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener('dragleave', this.handleFileDrag);</span>
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener('drop', this.boundHandleFileSelect);</span>
+  }
+  handleFileButtonClick() {
+<span class="cstat-no" title="statement not covered" >    const fileButtonContainer = findDOMNode(this.refs.fileButtonContainer);</span>
+<span class="cstat-no" title="statement not covered" >    const fileButton = fileButtonContainer.querySelector('input[type="file"]');</span>
+<span class="cstat-no" title="statement not covered" >    fileButton.click();</span>
+  }
+  handleFileDrag(e) {
+<span class="cstat-no" title="statement not covered" >    e.stopPropagation();</span>
+<span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
+  }
+  handleFileSelect(e) {
+    const { dispatch } = this.props;
+&nbsp;
+    // cancel event
+<span class="cstat-no" title="statement not covered" >    this.handleFileDrag(e);<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+    // fetch FileList object
+    const files = e.target.files || e.dataTransfer.files;<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+    // process last file only
+    if (files.length) {
+<span class="cstat-no" title="statement not covered" >      dispatch(setBufferFromFile(files[files.length - 1]));</span>
+    }
+  }
+  render() {
+    const {
+      audioContext,
+      buffer,
+      name
+    } = this.props;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;div&gt;
+        &lt;Row&gt;
+          &lt;Col md={4}&gt;
+            &lt;Jumbotron style={{padding: 20}}&gt;
+              &lt;h4&gt;Audio Editor&lt;/h4&gt;
+              You can drag-and-drop an audio file onto the window, choose from
+              an example file below, or use the open file button to select a
+              file to open from your computer.
+              &lt;hr /&gt;
+              &lt;Row&gt;
+                &lt;Col md={12}&gt;
+                  &lt;Input
+                    ref="fileButtonContainer"
+                    type="file"
+                    wrapperClassName="btn-file"
+                    label="Select a file from your computer"
+                    onChange={this.handleFileSelect.bind(this)}
+                  /&gt;
+                  &lt;Button
+                    bsStyle="primary"
+                    style={{width: '100%'}}
+                    onClick={this.handleFileButtonClick.bind(this)}&gt;
+                    &lt;Glyphicon glyph="folder-open" /&gt;
+                    &amp;nbsp;&amp;nbsp;
+                    Choose Local File
+                  &lt;/Button&gt;
+                &lt;/Col&gt;
+              &lt;/Row&gt;
+              &lt;hr /&gt;
+              &lt;Row&gt;
+                &lt;Col md={12}&gt;
+                  &lt;label className="control-label"&gt;
+                    Select an example file
+                  &lt;/label&gt;
+                &lt;/Col&gt;
+              &lt;/Row&gt;
+              &lt;ExampleFileSelector /&gt;
+              &lt;div&gt;&amp;nbsp;&lt;/div&gt;
+              &lt;Table striped bordered condensed hover&gt;
+                &lt;tbody&gt;
+                  &lt;tr&gt;
+                    &lt;th&gt;Name&lt;/th&gt;
+                    &lt;td&gt;{name}&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;th&gt;Sample Rate&lt;/th&gt;
+                    &lt;td&gt;{buffer.sampleRate}&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;th&gt;# of channels&lt;/th&gt;
+                    &lt;td&gt;{buffer.numberOfChannels}&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;th&gt;# of samples&lt;/th&gt;
+                    &lt;td&gt;{buffer.length}&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;th&gt;Duration&lt;/th&gt;
+                    &lt;td&gt;{humanizeDuration(Math.round(buffer.duration * 1000))}&lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/tbody&gt;
+              &lt;/Table&gt;
+            &lt;/Jumbotron&gt;
+          &lt;/Col&gt;
+          &lt;Col md={8}&gt;
+            &lt;AudioEditor
+              audioContext={audioContext}
+            /&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+export default connect(<span class="fstat-no" title="function not covered" >function (state) {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    audioContext: state.audioContext,
+    buffer: state.buffer,
+    name: state.name
+  };
+})(Editor);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

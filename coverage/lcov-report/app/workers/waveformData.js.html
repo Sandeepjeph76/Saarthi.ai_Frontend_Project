@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/workers/waveformData.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/workers/</a> waveformData.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.38% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/64</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">1.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/59</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">6 statements</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { getWaveformDataSchema } from '../defaults/waveformData';
+&nbsp;
+<span class="cstat-no" title="statement not covered" >self.onmessage = <span class="fstat-no" title="function not covered" >function (e) {</span></span>
+<span class="cstat-no" title="statement not covered" >  const startRenderTime = Date.now();</span>
+<span class="cstat-no" title="statement not covered" >  const forceRenderTime = 100;</span>
+<span class="cstat-no" title="statement not covered" >  let lastRenderTime = startRenderTime;</span>
+  const { size, buffer, start, end } = e.data;
+<span class="cstat-no" title="statement not covered" >  let newBufferLength = end - start;</span>
+<span class="cstat-no" title="statement not covered" >  let numBuckets = Math.min(size, newBufferLength);</span>
+<span class="cstat-no" title="statement not covered" >  numBuckets = Math.max(numBuckets, 1);</span>
+<span class="cstat-no" title="statement not covered" >  newBufferLength = Math.max(newBufferLength, 0);</span>
+<span class="cstat-no" title="statement not covered" >  const buckets = [];</span>
+<span class="cstat-no" title="statement not covered" >  const itemsPerBucket = newBufferLength / numBuckets;</span>
+<span class="cstat-no" title="statement not covered" >  let mainLoopIndex = start;</span>
+<span class="cstat-no" title="statement not covered" >  const mainLoopEnd = start + newBufferLength;</span>
+<span class="cstat-no" title="statement not covered" >  const emit = <span class="fstat-no" title="function not covered" >function (isFinished) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (isFinished || Date.now() - lastRenderTime &gt; forceRenderTime) {</span>
+<span class="cstat-no" title="statement not covered" >      const result = getWaveformDataSchema();</span>
+<span class="cstat-no" title="statement not covered" >      for (let i = 0; i &lt; buckets.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        const neg = buckets[i].neg;</span>
+<span class="cstat-no" title="statement not covered" >        const pos = buckets[i].pos;</span>
+<span class="cstat-no" title="statement not covered" >        result.posMin.push(pos.min || 0);</span>
+<span class="cstat-no" title="statement not covered" >        result.posAvg.push(pos.sum / (pos.count || 1));</span>
+<span class="cstat-no" title="statement not covered" >        result.posMax.push(pos.max || 0);</span>
+<span class="cstat-no" title="statement not covered" >        result.negMin.push((0 - neg.min) || 0);</span>
+<span class="cstat-no" title="statement not covered" >        result.negAvg.push(0 - (neg.sum / (neg.count || 1)));</span>
+<span class="cstat-no" title="statement not covered" >        result.negMax.push((0 - neg.max) || 0);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      result.renderTime = Date.now() - startRenderTime;</span>
+<span class="cstat-no" title="statement not covered" >      self.postMessage(result);</span>
+<span class="cstat-no" title="statement not covered" >      lastRenderTime = Date.now();</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (isFinished) {</span>
+<span class="cstat-no" title="statement not covered" >      self.close();</span>
+    }
+  };
+<span class="cstat-no" title="statement not covered" >  const initBucket = <span class="fstat-no" title="function not covered" >function (loopStart, loopEnd) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      neg: {
+        count: 0,
+        sum: 0,
+        min: null,
+        max: null
+      },
+      pos: {
+        count: 0,
+        sum: 0,
+        min: null,
+        max: null
+      },
+      loopStart: loopStart,
+      loopEnd: loopEnd
+    };
+  };
+<span class="cstat-no" title="statement not covered" >  const updateBucket = <span class="fstat-no" title="function not covered" >function (obj, key, val) {</span></span>
+<span class="cstat-no" title="statement not covered" >    obj[key].count++;</span>
+<span class="cstat-no" title="statement not covered" >    obj[key].sum += val;</span>
+<span class="cstat-no" title="statement not covered" >    if (val &lt; obj[key].min) {</span>
+<span class="cstat-no" title="statement not covered" >      obj[key].min = val;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (val &gt; obj[key].max) {</span>
+<span class="cstat-no" title="statement not covered" >      obj[key].max = val;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return obj;</span>
+  };<span class="cstat-no" title="statement not covered" ></span>
+  // create buckets
+  let loopStart = mainLoopIndex;
+<span class="cstat-no" title="statement not covered" >  for (let i = 0; i &lt; numBuckets; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    const loopEnd = loopStart + itemsPerBucket;</span>
+<span class="cstat-no" title="statement not covered" >    buckets[i] = initBucket(Math.round(loopStart), loopEnd);</span>
+<span class="cstat-no" title="statement not covered" >    loopStart += itemsPerBucket;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  while (mainLoopIndex &lt; mainLoopEnd) {</span>
+<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; numBuckets; i++) {</span>
+<span class="cstat-no" title="statement not covered" >      let val = buffer[buckets[i].loopStart];</span>
+<span class="cstat-no" title="statement not covered" >      if (val &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        val = Math.abs(val);</span>
+<span class="cstat-no" title="statement not covered" >        buckets[i] = updateBucket(buckets[i], 'neg', val);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (val &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        buckets[i] = updateBucket(buckets[i], 'pos', val);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      buckets[i].loopStart++;</span>
+<span class="cstat-no" title="statement not covered" >      mainLoopIndex++;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    emit(false);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  emit(true);</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >self.onerror = <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+  /*eslint-disable */
+<span class="cstat-no" title="statement not covered" >  console.log('worker error: waveformData', err);</span>
+  /*eslint-enable */
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

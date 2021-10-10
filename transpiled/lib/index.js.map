@@ -1,0 +1,1 @@
+{"version":3,"sources":["lib/index.js"],"names":[],"mappings":";;;;;;kBAAe,YAAY;;AAEzB,SAAO,CAAC,GAAG,CAAC,gCAAgC,CAAC;;AAAC,CAE/C","file":"lib/index.js","sourcesContent":["export default function () {\n  /*eslint-disable */\n  console.log('work in progress. coming soon.');\n  /*eslint-enable */\n}\n"],"sourceRoot":"/source/"}

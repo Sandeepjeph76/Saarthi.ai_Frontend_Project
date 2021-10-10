@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/ExampleFileSelector.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> ExampleFileSelector.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.39% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>68/109</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.49% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.87% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>5/46</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">58 statements, 13 functions, 31 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { Row, Col, Input, Button, Glyphicon } from 'react-bootstrap';
+import {
+  loadExampleFile,
+  setExamples,
+  setRandomGroupAndFile,
+  setRandomFile
+} from '../actions/examples';
+import { connect } from 'react-redux';
+import random from 'lodash.random';
+import akwf from '../examples/akwf.json';
+import loops from '../examples/loops.json';
+import virus from '../examples/virus.json';
+import waves from '../examples/waves.json';
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const groupData = {</span>
+  akwf: akwf,
+  loops: loops,
+  virus: virus,
+  waves: waves
+};
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getRandomGroup() {</span>
+<span class="cstat-no" title="statement not covered" >  const groups = getGroups();</span>
+<span class="cstat-no" title="statement not covered" >  return groups[random(groups.length - 1)];</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getRandomFile(groupKey) {</span>
+<span class="cstat-no" title="statement not covered" >  const files = getFilesByGroup(groupKey);</span>
+<span class="cstat-no" title="statement not covered" >  return files[random(files.length - 1)];</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getGroups() {</span>
+<span class="cstat-no" title="statement not covered" >  return [</span>
+    { key: 'akwf', name: 'Adventure Kid Waveforms'},
+    { key: 'loops', name: 'Loops'},
+    { key: 'waves', name: 'Test Wave Files'},
+    { key: 'virus', name: 'Virus Waveforms'}
+  ];
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getFilesByGroup(groupKey) {</span>
+<span class="cstat-no" title="statement not covered" >  return groupData[groupKey] || [];</span>
+}
+&nbsp;
+class ExampleFileSelector<span class="fstat-no" title="function not covered" > </span>extends Component {
+  componentDidMount() {
+<span class="cstat-no" title="statement not covered" >    this.dispatchBasedOnUrlParams.call(this, this.props);</span>
+  }
+  componentWillReceiveProps(nextProps) {
+<span class="cstat-no" title="statement not covered" >    const oldParams = this.props.router.params;</span>
+<span class="cstat-no" title="statement not covered" >    const newParams = nextProps.router.params;</span>
+<span class="cstat-no" title="statement not covered" >    if (oldParams.group !== newParams.group ||</span>
+      oldParams.file !== newParams.file) {
+<span class="cstat-no" title="statement not covered" >        this.dispatchBasedOnUrlParams.call(this, nextProps);</span>
+    }
+  }
+  dispatchBasedOnUrlParams(props) {
+    const { dispatch, router } = props;
+<span class="cstat-no" title="statement not covered" >    const group = router.params.group;</span>
+<span class="cstat-no" title="statement not covered" >    const fileName = router.params.file;</span>
+<span class="cstat-no" title="statement not covered" >    let file;</span>
+<span class="cstat-no" title="statement not covered" >    if (groupData.hasOwnProperty(group)) {</span>
+<span class="cstat-no" title="statement not covered" >      groupData[group].forEach(<span class="fstat-no" title="function not covered" >function (f) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (f[1].split('.')[0] === fileName) {</span>
+<span class="cstat-no" title="statement not covered" >          file = f[0];</span>
+        }
+      });
+<span class="cstat-no" title="statement not covered" >      dispatch(loadExampleFile(group, file));</span>
+    }
+  }
+  loadSelectedExampleFile() {
+    const { dispatch } = this.props;
+<span class="cstat-no" title="statement not covered" >    const selectedGroup = this.refs.selectGroup.getValue();</span>
+<span class="cstat-no" title="statement not covered" >    const selectedFile = this.refs.selectFile.getValue();</span>
+<span class="cstat-no" title="statement not covered" >    if (selectedGroup &amp;&amp; selectedFile) {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(loadExampleFile(selectedGroup, selectedFile));</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      dispatch(setExamples(selectedGroup, selectedFile));</span>
+    }
+  }
+  render() {
+    const { dispatch, examples } = this.props;
+<span class="cstat-no" title="statement not covered" >    const self = this;</span>
+<span class="cstat-no" title="statement not covered" >    const groups = getGroups();</span>
+<span class="cstat-no" title="statement not covered" >    const files = getFilesByGroup(examples.group);</span>
+<span class="cstat-no" title="statement not covered" >    let validFileSelected = false;</span>
+<span class="cstat-no" title="statement not covered" >    let validGroupSelected = false;</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof examples.file === 'string' &amp;&amp; examples.file.length) {</span>
+<span class="cstat-no" title="statement not covered" >      validFileSelected = true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (typeof examples.group === 'string' &amp;&amp; examples.group.length) {</span>
+<span class="cstat-no" title="statement not covered" >      validGroupSelected = true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >		return (</span>
+      &lt;div&gt;
+        &lt;Row&gt;
+          &lt;Col md={2}&gt;
+            &lt;strong&gt;Group:&lt;/strong&gt;
+          &lt;/Col&gt;
+          &lt;Col md={10}&gt;
+            &lt;Input ref="selectGroup" type="select" style={{width: '100%'}}
+              onChange={<span class="fstat-no" title="function not covered" >(e) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                dispatch(setExamples(e.target.value, null));</span>
+              }}&gt;
+              &lt;option value=""&gt;Select a group...&lt;/option&gt;
+              {groups.map(<span class="fstat-no" title="function not covered" >function (g) {</span>
+<span class="cstat-no" title="statement not covered" >                return (</span>
+                  &lt;option key={g.key} value={g.key}
+                    selected={g.key === examples.group}&gt;
+                    {g.name}
+                  &lt;/option&gt;
+                );
+              })}
+            &lt;/Input&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Row&gt;
+          &lt;Col md={2}&gt;
+            &lt;strong&gt;File:&lt;/strong&gt;
+          &lt;/Col&gt;
+          &lt;Col md={10}&gt;
+            &lt;Input ref="selectFile" type="select" style={{width: '100%'}}
+              onChange={self.loadSelectedExampleFile.bind(self)}&gt;
+              &lt;option value=""&gt;Select a file...&lt;/option&gt;
+              {files.map(<span class="fstat-no" title="function not covered" >function (f) {</span>
+<span class="cstat-no" title="statement not covered" >                return (</span>
+                  &lt;option key={f[0]} value={f[0]}
+                    selected={f[0] === examples.file}&gt;
+                    {f[1]}
+                  &lt;/option&gt;
+                );
+              })}
+            &lt;/Input&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Row&gt;
+          &lt;Col md={12} style={{
+              display: 'flex',
+              justifyContent: 'space-between'
+            }}&gt;
+            &lt;Button bsStyle="primary"
+              disabled={!validFileSelected}
+              onClick={self.loadSelectedExampleFile.bind(self)}&gt;
+              &lt;Glyphicon glyph="play" /&gt;
+              &amp;nbsp;
+              Load Example
+            &lt;/Button&gt;
+            &lt;Button bsStyle="primary"
+              disabled={!validGroupSelected}
+              onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                dispatch(setRandomFile());</span>
+              }}&gt;
+              &lt;Glyphicon glyph="random" /&gt;
+              &amp;nbsp;
+              File
+            &lt;/Button&gt;
+            &lt;Button bsStyle="primary" onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                dispatch(setRandomGroupAndFile());</span>
+              }}&gt;
+              &lt;Glyphicon glyph="random" /&gt;
+              &amp;nbsp;
+              Group
+            &lt;/Button&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+      &lt;/div&gt;
+		);
+	}
+}
+&nbsp;
+export default connect(<span class="fstat-no" title="function not covered" >function (state) {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    examples: state.examples,
+    router: state.router
+  };
+})(ExampleFileSelector);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

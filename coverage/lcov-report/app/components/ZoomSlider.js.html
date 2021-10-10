@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/ZoomSlider.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> ZoomSlider.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.21% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>53/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.96% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>16/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.27% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/44</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">47 statements, 16 functions, 31 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setZoom, setZoomEdit, zoomMoveCenter } from '../actions/zoom';
+&nbsp;
+class ZoomSlider<span class="fstat-no" title="function not covered" > </span>extends Component {
+  componentDidMount() {
+<span class="cstat-no" title="statement not covered" >    this.boundCenter = this.handleCenter.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.boundMouseUp = this.handleMouseUp.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.boundMouseMove = this.handleMouseMove.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('mouseup', this.boundMouseUp);</span>
+  }
+  componentWillUnmount() {
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener('mouseup', this.boundMouseUp);</span>
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener('mousemove', this.boundMouseMove);</span>
+  }
+  getPosition(e) {
+<span class="cstat-no" title="statement not covered" >    const zoomWindow = this.refs.zoomSlider.getBoundingClientRect();</span>
+<span class="cstat-no" title="statement not covered" >    const root = document.documentElement;</span>
+<span class="cstat-no" title="statement not covered" >    const mouseX = e.clientX - zoomWindow.left - root.scrollLeft;</span>
+<span class="cstat-no" title="statement not covered" >    let ratio = mouseX / zoomWindow.width;</span>
+<span class="cstat-no" title="statement not covered" >    ratio = Math.min(1, ratio);</span>
+<span class="cstat-no" title="statement not covered" >    ratio = Math.max(0, ratio);</span>
+<span class="cstat-no" title="statement not covered" >    return ratio;</span>
+  }
+  handleCenter(e) {
+    const { dispatch } = this.props;
+<span class="cstat-no" title="statement not covered" >    const ratio = this.getPosition.call(this, e);</span>
+<span class="cstat-no" title="statement not covered" >    dispatch(zoomMoveCenter(ratio));</span>
+  }
+  handleMouseDown(e) {
+    const { dispatch } = this.props;
+<span class="cstat-no" title="statement not covered" >    if (e.target === this.refs.zoomMiddle || e.target === this.refs.zoomSlider) {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(setZoomEdit(true, 'move'));</span>
+<span class="cstat-no" title="statement not covered" >      this.boundCenter(e);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (e.target === this.refs.zoomLeft) {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(setZoomEdit(true, 'changeLeft'));</span>
+    } else <span class="cstat-no" title="statement not covered" >if (e.target === this.refs.zoomRight) {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(setZoomEdit(true, 'changeRight'));</span>
+    }
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('mousemove', this.boundMouseMove);</span>
+  }
+  handleMouseUp() {
+    const { dispatch } = this.props;
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener('mousemove', this.boundMouseMove);</span>
+<span class="cstat-no" title="statement not covered" >    dispatch(setZoomEdit(false));</span>
+  }
+  handleMouseMove(e) {
+    const { dispatch, buffer, zoom } = this.props;
+<span class="cstat-no" title="statement not covered" >    if (zoom.isEditing) {</span>
+<span class="cstat-no" title="statement not covered" >      if (zoom.editType === 'move') {</span>
+<span class="cstat-no" title="statement not covered" >        this.boundCenter(e);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        const ratio = this.getPosition.call(this, e);</span>
+<span class="cstat-no" title="statement not covered" >        const newValue = buffer.length * ratio;</span>
+<span class="cstat-no" title="statement not covered" >        if (zoom.editType === 'changeLeft') {</span>
+<span class="cstat-no" title="statement not covered" >          dispatch(setZoom(newValue, zoom.end));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (zoom.editType === 'changeRight') {</span>
+<span class="cstat-no" title="statement not covered" >          dispatch(setZoom(zoom.start, newValue));</span>
+        }
+      }
+    }
+  }
+  render() {
+    const { buffer, zoom } = this.props;
+<span class="cstat-no" title="statement not covered" >    const style = {};</span>
+<span class="cstat-no" title="statement not covered" >    const size = Math.max(buffer.length, 1);</span>
+<span class="cstat-no" title="statement not covered" >    const left = (zoom.start / size) * 100;</span>
+<span class="cstat-no" title="statement not covered" >    let width = Math.max(zoom.length, 1);</span>
+<span class="cstat-no" title="statement not covered" >    width = (width / size) * 100;</span>
+<span class="cstat-no" title="statement not covered" >    style.left = `${left}%`;</span>
+<span class="cstat-no" title="statement not covered" >    style.width = `${width}%`;</span>
+<span class="cstat-no" title="statement not covered" >		return (</span>
+      &lt;div ref="zoomSlider" className={`zoom-slider edit-type-${zoom.editType}`} onMouseDown={this.handleMouseDown.bind(this)}&gt;
+        &lt;div ref="zoomThumb" className="zoom-slider-thumb" style={style}&gt;
+          &lt;div ref="zoomLeft" className="zoom-slider-item zoom-slider-left"&gt;&lt;/div&gt;
+          &lt;div ref="zoomMiddle" className="zoom-slider-item zoom-slider-middle"&gt;&lt;/div&gt;
+          &lt;div ref="zoomRight" className="zoom-slider-item zoom-slider-right"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+		);
+	}
+}
+&nbsp;
+export default connect(<span class="fstat-no" title="function not covered" >function (state) {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    buffer: state.buffer,
+    zoom: state.zoom
+  };
+})(ZoomSlider);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

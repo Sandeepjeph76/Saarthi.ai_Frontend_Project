@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/DisplayAmplitudePath.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> DisplayAmplitudePath.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.78% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.23% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.56% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/18</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">37 statements, 9 functions, 31 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getWaveformDataSchema } from '../defaults/waveformData';
+&nbsp;
+class DisplayAmplitudePath<span class="fstat-no" title="function not covered" > </span>extends Component {
+  render() {
+<span class="cstat-no" title="statement not covered" >    const self = this;</span>
+<span class="cstat-no" title="statement not covered" >    const styles = {</span>
+      width: this.props.width,
+      height: this.props.height
+    };
+<span class="cstat-no" title="statement not covered" >    let size = 0;</span>
+<span class="cstat-no" title="statement not covered" >    ['posMax', 'negMax', 'posMin', 'negMin'].forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (self.props[key]) {</span>
+<span class="cstat-no" title="statement not covered" >        size = Math.max(size, self.props[key].length || 0);</span>
+      }
+    });
+<span class="cstat-no" title="statement not covered" >    const color = 'rgba(0, 0, 200, 0.5)';</span>
+<span class="cstat-no" title="statement not covered" >    const strokeColor = 'rgba(80, 80, 80, 0.5)';</span>
+<span class="cstat-no" title="statement not covered" >    const getPath = <span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >      let d = 'M0 0 L0 0';</span>
+<span class="cstat-no" title="statement not covered" >      if (self.props.hasOwnProperty(key)) {</span>
+<span class="cstat-no" title="statement not covered" >        self.props[key].forEach(<span class="fstat-no" title="function not covered" >function (item, i) {</span></span>
+<span class="cstat-no" title="statement not covered" >          d += ` L${i} ${0 - item}`;</span>
+        });
+      }
+<span class="cstat-no" title="statement not covered" >      d += ` L${size - 1} 0 Z`;</span>
+<span class="cstat-no" title="statement not covered" >      return d;</span>
+    };
+<span class="cstat-no" title="statement not covered" >		return (</span>
+      &lt;svg
+        className="display-amplitude-path"
+        style={styles}
+        viewBox={`0 -1 ${size - 1} 2`}
+        preserveAspectRatio="none"&gt;
+        &lt;g&gt;
+          &lt;line x1={0} y1={0} x2={size} y2={0}
+            stroke={strokeColor} strokeWidth={0.01} /&gt;
+        &lt;/g&gt;
+        &lt;g&gt;
+          &lt;path d={getPath('posMax')} fill={color} /&gt;
+          &lt;path d={getPath('negMax')} fill={color} /&gt;
+        &lt;/g&gt;
+        &lt;g&gt;
+          &lt;path d={getPath('posAvg')} fill={color} /&gt;
+          &lt;path d={getPath('negAvg')} fill={color} /&gt;
+        &lt;/g&gt;
+      &lt;/svg&gt;
+		);
+	}
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >DisplayAmplitudePath.defaultProps = Object.assign({</span>
+  width: '100%',
+  height: 200
+}, getWaveformDataSchema());
+&nbsp;
+export default connect()(DisplayAmplitudePath);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

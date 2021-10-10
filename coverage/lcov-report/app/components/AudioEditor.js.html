@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/AudioEditor.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> AudioEditor.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.9% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>113/155</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">67.19% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>43/64</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.76% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/42</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">106 statements, 15 functions, 43 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import arrayGet from 'array-any-index';
+import DisplayAmplitudePath from './DisplayAmplitudePath';
+import DisplayContainer from './DisplayContainer';
+import DisplayMessage from './DisplayMessage';
+import DisplayPlaybackPosition from './DisplayPlaybackPosition';
+import PlayBar from './PlayBar';
+import PlaybackPositionSlider from './PlaybackPositionSlider';
+import PlaybackRateBar from './PlaybackRateBar';
+import PlaybackRateSlider from './PlaybackRateSlider';
+import VolumeSlider from './VolumeSlider';
+import WaveformDataDebugBar from './WaveformDataDebugBar';
+import ZoomBar from './ZoomBar';
+import ZoomSlider from './ZoomSlider';
+import { setPlaybackPosition } from '../actions/playbackPosition';
+import { setPlaybackType } from '../actions/playbackType';
+import raf from 'raf';
+import * as types from '../constants/ActionTypes';
+&nbsp;
+class AudioEditor<span class="fstat-no" title="function not covered" > </span>extends Component {
+<span class="fstat-no" title="function not covered" >  constructor(props) {</span>
+    super(props);
+<span class="cstat-no" title="statement not covered" >    this.audioPosition = 0;</span>
+<span class="cstat-no" title="statement not covered" >    this.audioSource = null;</span>
+<span class="cstat-no" title="statement not covered" >    this.audioProcessor = null;</span>
+  }
+  componentDidMount() {
+    const { audioContext, playbackPosition } = this.props;
+<span class="cstat-no" title="statement not covered" >    this.audioPosition = playbackPosition.position || 0;</span>
+<span class="cstat-no" title="statement not covered" >    this.audioSource = audioContext.createBufferSource();</span>
+<span class="cstat-no" title="statement not covered" >    this.audioSource.loop = true;</span>
+<span class="cstat-no" title="statement not covered" >    this.audioProcessor = audioContext.createScriptProcessor(Math.pow(2, 12), 1, 1);</span>
+<span class="cstat-no" title="statement not covered" >    this.audioProcessor.onaudioprocess = this.onAudioProcess.bind(this);<span class="cstat-no" title="statement not covered" ></span></span>
+    // connect
+    this.audioSource.connect(this.audioProcessor);
+<span class="cstat-no" title="statement not covered" >    this.audioProcessor.connect(audioContext.destination);<span class="cstat-no" title="statement not covered" ></span></span>
+    // requestAnimationFrame
+    raf(this.handleUpdatePlaybackPosition.bind(this));
+  }
+  componentWillReceiveProps(nextProps) {
+    const { playbackPosition } = nextProps;
+<span class="cstat-no" title="statement not covered" >    if (playbackPosition.source !== types.SOURCE_ON_AUDIO_PROCESS &amp;&amp;</span>
+      Number.isFinite(playbackPosition.position)) {
+<span class="cstat-no" title="statement not covered" >      this.audioPosition = playbackPosition.position;</span>
+    }
+  }
+  componentWillUnmount() {
+    const { dispatch, audioContext } = this.props;
+    // disconnect
+<span class="cstat-no" title="statement not covered" >    this.audioProcessor.disconnect(audioContext.destination);</span>
+<span class="cstat-no" title="statement not covered" >    this.audioSource.disconnect(this.audioProcessor);</span>
+<span class="cstat-no" title="statement not covered" >    this.audioProcessor = null;</span>
+<span class="cstat-no" title="statement not covered" >    this.audioSource = null;</span>
+<span class="cstat-no" title="statement not covered" >    dispatch(setPlaybackType(0));</span>
+  }
+  handleUpdatePlaybackPosition() {
+    const { dispatch, buffer } = this.props;
+<span class="cstat-no" title="statement not covered" >    if (buffer.length) {</span>
+<span class="cstat-no" title="statement not covered" >      let pos = this.audioPosition % buffer.length;</span>
+<span class="cstat-no" title="statement not covered" >      if (pos &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        pos = buffer.length + pos;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      dispatch(setPlaybackPosition(pos, types.SOURCE_ON_AUDIO_PROCESS));</span>
+    }
+<span class="cstat-no" title="statement not covered" >    raf(this.handleUpdatePlaybackPosition.bind(this));</span>
+  }
+  onAudioProcess(e) {
+    const {
+      buffer,
+      playbackRate,
+      playbackType,
+      volume
+    } = this.props;
+<span class="cstat-no" title="statement not covered" >    const channelData = [];</span>
+<span class="cstat-no" title="statement not covered" >    const output = e.outputBuffer.getChannelData(0);</span>
+<span class="cstat-no" title="statement not covered" >    if (buffer.length &amp;&amp;</span>
+      typeof buffer.numberOfChannels === 'number' &amp;&amp;
+      playbackType !== 0) {
+<span class="cstat-no" title="statement not covered" >      for (let i = 0; i &lt; buffer.numberOfChannels; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        channelData[i] = buffer.getChannelData(i);</span>
+      }
+    }
+<span class="cstat-no" title="statement not covered" >    for (let i = 0; i &lt; output.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >      output[i] = 0;</span>
+<span class="cstat-no" title="statement not covered" >      for (let j = 0; j &lt; channelData.length; j++) {</span>
+        // mix output
+<span class="cstat-no" title="statement not covered" >        output[i] += arrayGet(channelData[j], this.audioPosition);</span>
+      }<span class="cstat-no" title="statement not covered" ></span>
+      // adjust output
+      if (channelData.length &gt; 1) {
+<span class="cstat-no" title="statement not covered" >        output[i] = output[i] / channelData.length;</span>
+      }<span class="cstat-no" title="statement not covered" ></span>
+      // add volume
+      output[i] = output[i] * volume;
+<span class="cstat-no" title="statement not covered" >      if (playbackType &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        this.audioPosition = this.audioPosition + playbackRate;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (playbackType &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        this.audioPosition = this.audioPosition - playbackRate;</span>
+      }
+    }
+  }
+  render() {
+    const { buffer, playbackPosition, waveformData, zoom } = this.props;
+<span class="cstat-no" title="statement not covered" >		return (</span>
+      &lt;div&gt;
+        &lt;Row&gt;
+          &lt;Col md={6}&gt;
+            &lt;PlayBar /&gt;
+          &lt;/Col&gt;
+          &lt;Col md={6}&gt;
+            &lt;PlaybackRateBar /&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Row&gt;
+          &lt;Col md={6}&gt;
+            &lt;VolumeSlider /&gt;
+          &lt;/Col&gt;
+          &lt;Col md={6}&gt;
+            &lt;PlaybackRateSlider /&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Row&gt;
+          &lt;Col md={12}&gt;
+            &lt;DisplayContainer&gt;
+              &lt;DisplayAmplitudePath { ...waveformData.zoom } /&gt;
+              &lt;DisplayPlaybackPosition min={zoom.start} max={zoom.end} /&gt;
+              &lt;DisplayMessage { ...waveformData.zoom } /&gt;
+            &lt;/DisplayContainer&gt;
+            &lt;PlaybackPositionSlider min={zoom.start} max={zoom.end} /&gt;
+            &lt;Row&gt;
+              &lt;Col md={6}&gt;
+                &lt;ZoomBar /&gt;
+              &lt;/Col&gt;
+              &lt;Col md={6}&gt;
+                &lt;WaveformDataDebugBar { ...waveformData.zoom } /&gt;
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Row&gt;
+          &lt;Col md={12}&gt;
+            &lt;DisplayContainer&gt;
+              &lt;DisplayAmplitudePath { ...waveformData.overview } height={50} /&gt;
+              &lt;DisplayPlaybackPosition min={0} max={buffer.length - 1} /&gt;
+              &lt;ZoomSlider /&gt;
+              &lt;DisplayMessage { ...waveformData.overview } /&gt;
+            &lt;/DisplayContainer&gt;
+            &lt;PlaybackPositionSlider min={0} max={buffer.length - 1} /&gt;
+            &lt;Row&gt;
+              &lt;Col md={6}&gt;
+                &lt;small&gt;Position: {Math.round(playbackPosition.position)}&lt;/small&gt;
+              &lt;/Col&gt;
+              &lt;Col md={6}&gt;
+                &lt;WaveformDataDebugBar { ...waveformData.overview } /&gt;
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+      &lt;/div&gt;
+		);
+	}
+}
+&nbsp;
+export default connect(<span class="fstat-no" title="function not covered" >function (state) {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    audioContext: state.audioContext,
+    buffer: state.buffer,
+    playbackPosition: state.playbackPosition,
+    playbackRate: state.playbackRate,
+    playbackType: state.playbackType,
+    volume: state.volume,
+    waveformData: state.waveformData,
+    zoom: state.zoom
+  };
+})(AudioEditor);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/components/ZoomBar.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/components/</a> ZoomBar.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>63/81</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">82.98% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>39/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.26% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/19</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">56 statements, 12 functions, 39 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { Button, Glyphicon, Collapse, Panel } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import * as zoomFunctions from '../actions/zoom';
+&nbsp;
+class ZoomBar<span class="fstat-no" title="function not covered" > </span>extends Component {
+  handleZoom(fnName) {
+    const { dispatch } = this.props;
+<span class="cstat-no" title="statement not covered" >    if (zoomFunctions.hasOwnProperty(fnName)) {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(zoomFunctions[fnName]());</span>
+    }
+  }
+  handleSlide(type, e) {
+    const { dispatch, zoom } = this.props;
+<span class="cstat-no" title="statement not covered" >    if (type === 'start') {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(zoomFunctions.setZoom(e.target.value, zoom.end));</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === 'end') {</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(zoomFunctions.setZoom(zoom.start, e.target.value));</span>
+    }
+  }
+  render() {
+    const { dispatch, buffer, zoom } = this.props;
+<span class="cstat-no" title="statement not covered" >    const self = this;</span>
+<span class="cstat-no" title="statement not covered" >    const bsStyle = 'primary';</span>
+<span class="cstat-no" title="statement not covered" >    const bsSize = 'xsmall';</span>
+<span class="cstat-no" title="statement not covered" >    const padRight = '5px';</span>
+<span class="cstat-no" title="statement not covered" >    const len = zoom.end - zoom.start;</span>
+<span class="cstat-no" title="statement not covered" >    let ratio = Math.max(0, buffer.length - 1) / len;</span>
+<span class="cstat-no" title="statement not covered" >    ratio = parseFloat(ratio.toFixed(2));</span>
+<span class="cstat-no" title="statement not covered" >    if (!Number.isFinite(ratio)) {</span>
+<span class="cstat-no" title="statement not covered" >      ratio = 1;</span>
+    }
+<span class="cstat-no" title="statement not covered" >		return (</span>
+      &lt;div&gt;
+        &lt;Button
+          bsStyle={bsStyle}
+          bsSize={bsSize}
+          style={{marginRight: padRight}}
+          onClick={self.handleZoom.bind(self, 'zoomIn')}&gt;
+          &lt;Glyphicon glyph="zoom-in" /&gt;
+          &amp;nbsp;
+          Zoom In
+        &lt;/Button&gt;
+        &lt;Button
+          bsStyle={bsStyle}
+          bsSize={bsSize}
+          style={{marginRight: padRight}}
+          onClick={self.handleZoom.bind(self, 'zoomOut')}&gt;
+          &lt;Glyphicon glyph="zoom-out" /&gt;
+          &amp;nbsp;
+          Zoom Out
+        &lt;/Button&gt;
+        &lt;Button
+          bsStyle={bsStyle}
+          bsSize={bsSize}
+          onClick={self.handleZoom.bind(self, 'zoomShowAll')}&gt;
+          &lt;Glyphicon glyph="resize-horizontal" /&gt;
+          &amp;nbsp;
+          Show All
+        &lt;/Button&gt;
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;
+        &lt;a style={{cursor: 'pointer'}} onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            dispatch(zoomFunctions.toggleZoomPanel());</span>
+          }}&gt;&lt;small&gt;1 : {ratio}&lt;/small&gt;&lt;/a&gt;
+        &lt;Collapse in={zoom.zoomPanelExpanded}&gt;
+          &lt;Panel header="Zoom Info" bsStyle="info" style={{marginTop: 10}}&gt;
+            &lt;div&gt;
+              Zoom Length: {zoom.length}
+            &lt;/div&gt;
+            &lt;hr /&gt;
+            &lt;div&gt;
+              Start: {zoom.start}
+              &lt;input
+                type="range"
+                step="1"
+                min="0"
+                max={buffer.length}
+                value={zoom.start}
+                onChange={this.handleSlide.bind(this, 'start')}
+                onInput={this.handleSlide.bind(this, 'start')}
+              /&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              End: {zoom.end}
+              &lt;input
+                type="range"
+                step="1"
+                min="0"
+                max={buffer.length}
+                value={zoom.end}
+                onChange={this.handleSlide.bind(this, 'end')}
+                onInput={this.handleSlide.bind(this, 'end')}
+              /&gt;
+            &lt;/div&gt;
+          &lt;/Panel&gt;
+        &lt;/Collapse&gt;
+      &lt;/div&gt;
+		);
+	}
+}
+&nbsp;
+export default connect(<span class="fstat-no" title="function not covered" >function (state) {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    buffer: state.buffer,
+    zoom: state.zoom
+  };
+})(ZoomBar);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 07 2015 03:33:25 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
